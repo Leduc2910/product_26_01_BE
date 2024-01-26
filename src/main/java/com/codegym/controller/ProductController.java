@@ -42,4 +42,9 @@ public class ProductController {
         List<Product> productList = productIService.findByName(name);
         return new ResponseEntity<>(productList, HttpStatus.OK);
     }
+    @GetMapping("/price")
+    public ResponseEntity<List<Product>> showByName(@RequestParam int min, @RequestParam int max) {
+        List<Product> productList = productIService.findByPrice(min, max);
+        return new ResponseEntity<>(productList, HttpStatus.OK);
+    }
 }

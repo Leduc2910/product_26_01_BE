@@ -36,4 +36,9 @@ public class CategoryService implements IService<Category>{
     public List<Category> findByName(String name) {
         return null;
     }
+
+    @Override
+    public List<Category> findByPrice(int min, int max) {
+        return null;
+    }
 }

@@ -9,4 +9,6 @@ public interface IService<E> {
     List<E> findAll();
     Optional<E> findEById(Long id);
     List<E> findByName(String name);
+    List<E> findByPrice(int min, int max);
+
 }
