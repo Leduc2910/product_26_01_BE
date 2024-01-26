@@ -41,4 +41,9 @@ public class ProductService implements IService<Product>{
     public List<Product> findByPrice(int min, int max) {
         return productRepository.findAllByPriceBetween(min, max);
     }
+
+    @Override
+    public List<Product> findByCategory(Long id) {
+        return productRepository.findAllByCategoryId(id);
+    }
 }

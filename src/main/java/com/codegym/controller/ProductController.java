@@ -47,4 +47,9 @@ public class ProductController {
         List<Product> productList = productIService.findByPrice(min, max);
         return new ResponseEntity<>(productList, HttpStatus.OK);
     }
+    @GetMapping("/category/{id}")
+    public ResponseEntity<List<Product>> showByName(@PathVariable Long id) {
+        List<Product> productList = productIService.findByCategory(id);
+        return new ResponseEntity<>(productList, HttpStatus.OK);
+    }
 }

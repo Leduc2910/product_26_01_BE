@@ -41,4 +41,9 @@ public class CategoryService implements IService<Category>{
     public List<Category> findByPrice(int min, int max) {
         return null;
     }
+
+    @Override
+    public List<Category> findByCategory(Long id) {
+        return null;
+    }
 }
